@@ -1,7 +1,7 @@
 form-validation
 ===============
 
-A super-light, flexible, easy-to-use form validation in javascript (requires [jQuery](http://jquery.com/).
+A super-light, flexible, easy-to-use form validation in javascript (requires [jQuery](http://jquery.com/)).
 
 ##How to use it?
 Firs, we need to set some validation rules:
@@ -64,67 +64,67 @@ And we are done!. When the user submits the form, it will be validated.
 * ###LessThan
 	* For numbers (not number of characters).
 
-		* ####Example
-			```javascript
-			var rules = {
-				'idOfTheField': {
-					lessThan: {
-						value: 2,
-						message: 'This field must less than 2'
-					}
+	* ####Example
+		```javascript
+		var rules = {
+			'idOfTheField': {
+				lessThan: {
+					value: 2,
+					message: 'This field must less than 2'
 				}
-			};
-			```
+			}
+		};
+		```
 
 * ###GreaterThan
 	* For numbers (not number of characters).
 
-		* ####Example
-			```javascript
-			var rules = {
-				'idOfTheField': {
-					greaterThan: {
-						value: 2,
-						message: 'This field must greater than 2'
-					}
+	* ####Example
+		```javascript
+		var rules = {
+			'idOfTheField': {
+				greaterThan: {
+					value: 2,
+					message: 'This field must greater than 2'
 				}
-			};
-			```
+			}
+		};
+		```
 
 * ###minLength/maxLength
 	* This will look for the number of characters in the field.
 
-		* ####Example
-			```javascript
-			var rules = {
-				'idOfTheField': {
-					minLength: {
-						value: 2,
-						message: 'This field must have at least 2 characters'
-					},
+	* ####Example
+		```javascript
+		var rules = {
+			'idOfTheField': {
+				minLength: {
+					value: 2,
+					message: 'This field must have at least 2 characters'
+				},
 
-					maxLength: {
-						value: 4,
-						message: 'This field can contain maximum 4 characters'
-					}
+				maxLength: {
+					value: 4,
+					message: 'This field can contain maximum 4 characters'
 				}
-			};
-			```
+			}
+		};
+		```
 
 * ###RegularExpression
 	* This will compare a regular expresion with `test`.
 
-		* ####Example
-			```javascript
-			var rules = {
-				'idOfTheField': {
-					regularExpression: {
-						value: /\d/,
-						message: 'Only numbers (0-9)'
-					}
+	* ####Example
+		```javascript
+		var rules = {
+			'idOfTheField': {
+				regularExpression: {
+					value: /\d/,
+					message: 'Only numbers (0-9)'
 				}
-			};
-			```
+			}
+		};
+		```
 
 * ###Email
 	* This uses RegularExpression (see above) to check for valid emails.
