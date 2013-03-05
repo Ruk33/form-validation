@@ -39,6 +39,8 @@ And we are done!. When the user submits the form, it will be validated.
 Suported validations
 -
 ###Equal
+The field, must be equal to...
+
 ####Example
 ```javascript
 var rules = {
@@ -73,7 +75,7 @@ var rules = {
 	'idOfTheField': {
 		lessThan: {
 			value: 2,
-			message: 'This field must less than 2'
+			message: 'This field must be less than 2'
 		}
 	}
 };
@@ -88,7 +90,7 @@ var rules = {
 	'idOfTheField': {
 		greaterThan: {
 			value: 2,
-			message: 'This field must greater than 2'
+			message: 'This field must be greater than 2'
 		}
 	}
 };
@@ -154,6 +156,16 @@ addCustomFormValidation('catLanguage', function(input, data) {
 	input = __formValidation.inputs[input].input;
 	return input.val() == 'Miau';
 });
+```
+
+And then, we can use it:
+
+```javascript
+'input': {
+	catLanguage: {
+		message: 'That is not a cat word!'
+	}
+}
 ```
 
 In this example, the field must be 'Miau'.
