@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- If the form is not sucessfully validated the action will be stoped -->
+		<form id="form-to-validate" action="/">
+			<div>
+				<label>Username:</label>
+				<input id="username" type="text"></input>
+				<!-- Here will be display errors for the username input -->
+				<div id="error-username"></div>
+			</div>
+
+			<div>
+				<label>Repeat Username:</label>
+				<input id="repeatUsername" type="text"></input>
+				<div id="error-repeatUsername"></div>
+			</div>
+
+			<div>
+				<label>E-Mail:</label>
+				<input id="email" type="text"></input>
+				<div id="error-email"></div>
+			</div>
+
+			<div>
+				<label>Cat word:</label>
+				<input id="catWord" type="text"></input>
+				<div id="error-catWord"></div>
+			</div>			
+
+			<input type="submit" value="Validate!"></input>
+		</form>
+
+		<script type="text/javascript" src="../form-validation.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/*
+				 * Adding custom validation! :3
+				 * *Remember: Custom validations must be on the top, 
+				 * before any "setValidationRules" or "rules" at least
+				 */
+				addCustomFormValidation('catLanguage', function(input, data) {
+					// field that we are validating
+					input = __formValidation.inputs[input].input;
+					return input.val() == 'Miau';
+				});
+
+				/*
+				 * Creating the rules
+				 */
+				var rules = {
+					'username': {
+						minLength: {
+							value: 2,
+							message: 'This field must have at least 2 characters'
+						},
+						maxLength: {
+							value: 7,
+							message: 'This field can contain maximum 7 characters'
+						}
+					},
+
+					'repeatUsername': {
+						equal: {
+							value: $('#username'),
+							message: 'The username must be the same'
+						}
+					},
+
+					'email': {
+						email: {
+							message: 'The email is incorrect'
+						}
+					},
+
+					'catWord': {
+						catLanguage: {
+							message: 'That is not a cat word!'
+						}
+					}
+				};
+
+				/*
+				 * Adding validation rules to the form
+				 */
+				$('#form-to-validate').setValidationRules(
+					rules,
+					function() {
+						console.log('Form sucessfully validated :D');
+					}
+				);
+			});
+		</script>
+	</body>
+</html>
