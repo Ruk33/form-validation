@@ -36,8 +36,8 @@ $('#form-to-validate').setValidationRules(
 And we are done!. When the user submits the form, it will be validated.
 
 ##Suported validations
-* Equal
-	Example
+* ###Equal
+	* ####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -61,10 +61,10 @@ And we are done!. When the user submits the form, it will be validated.
 			}
 		};
 		```
-* LessThan
-	For numbers (not number of characters).
+* ###LessThan
+	* For numbers (not number of characters).
 
-		Example
+		* ####Example
 			```javascript
 			var rules = {
 				'idOfTheField': {
@@ -76,10 +76,10 @@ And we are done!. When the user submits the form, it will be validated.
 			};
 			```
 
-* GreaterThan
-	For numbers (not number of characters).
+* ###GreaterThan
+	* For numbers (not number of characters).
 
-		Example
+		* ####Example
 			```javascript
 			var rules = {
 				'idOfTheField': {
@@ -91,10 +91,10 @@ And we are done!. When the user submits the form, it will be validated.
 			};
 			```
 
-* minLength/maxLength
-	This will look for the number of characters in the field.
+* ###minLength/maxLength
+	* This will look for the number of characters in the field.
 
-		Example
+		* ####Example
 			```javascript
 			var rules = {
 				'idOfTheField': {
@@ -111,10 +111,10 @@ And we are done!. When the user submits the form, it will be validated.
 			};
 			```
 
-* RegularExpression
-	This will compare a regular expresion with `test`.
+* ###RegularExpression
+	* This will compare a regular expresion with `test`.
 
-		Example
+		* ####Example
 			```javascript
 			var rules = {
 				'idOfTheField': {
@@ -126,12 +126,12 @@ And we are done!. When the user submits the form, it will be validated.
 			};
 			```
 
-* Email
-	This uses RegularExpression (see above) to check for valid emails.
+* ###Email
+	* This uses RegularExpression (see above) to check for valid emails.
 
-	Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
+	* Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
 
-	Example
+	* ####Example
 		```javascript
 			var rules = {
 				'idOfTheField': {
