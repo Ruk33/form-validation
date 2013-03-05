@@ -37,7 +37,7 @@ And we are done!. When the user submits the form, it will be validated.
 
 ##Suported validations
 * ###Equal
-	* ####Example
+	####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -63,9 +63,9 @@ And we are done!. When the user submits the form, it will be validated.
 		```
 
 * ###LessThan
-	* For numbers (not number of characters).
+	For numbers (not number of characters).
 
-	* ####Example
+	####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -78,9 +78,9 @@ And we are done!. When the user submits the form, it will be validated.
 		```
 
 * ###GreaterThan
-	* For numbers (not number of characters).
+	For numbers (not number of characters).
 
-	* ####Example
+	####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -93,9 +93,9 @@ And we are done!. When the user submits the form, it will be validated.
 		```
 
 * ###minLength/maxLength
-	* This will look for the number of characters in the field.
+	This will look for the number of characters in the field.
 
-	* ####Example
+	####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -113,9 +113,9 @@ And we are done!. When the user submits the form, it will be validated.
 		```
 
 * ###RegularExpression
-	* This will compare a regular expresion with `test`.
+	This will compare a regular expresion with `test`.
 
-	* ####Example
+	####Example
 		```javascript
 		var rules = {
 			'idOfTheField': {
@@ -134,14 +134,14 @@ And we are done!. When the user submits the form, it will be validated.
 
 	####Example
 		```javascript
-			var rules = {
-				'idOfTheField': {
-					email: {
-						message: 'Invalid email'
-					}
+		var rules = {
+			'idOfTheField': {
+				email: {
+					message: 'Invalid email'
 				}
-			};
-			```
+			}
+		};
+		```
 
 ##How to add my custom validation?
 You can use the `addCustomFormValidation` function:
