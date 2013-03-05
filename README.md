@@ -39,111 +39,111 @@ And we are done!. When the user submits the form, it will be validated.
 Suported validations
 -
 ###Equal
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			equal: {
-				value: 2,
-				message: 'This field must be 2'
-			}
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		equal: {
+			value: 2,
+			message: 'This field must be 2'
 		}
-	};
-	```
+	}
+};
+```
 
-	Also, we can assign an element to check for the values:
+Also, we can assign an element to check for the values:
 
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			equal: {
-				value: $('#anotherField'),
-				message: 'This field must be equal to #anotherField'
-			}
+```javascript
+var rules = {
+	'idOfTheField': {
+		equal: {
+			value: $('#anotherField'),
+			message: 'This field must be equal to #anotherField'
 		}
-	};
-	```
+	}
+};
+```
 
 ###LessThan
-	For numbers (not number of characters).
+For numbers (not number of characters).
 
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			lessThan: {
-				value: 2,
-				message: 'This field must less than 2'
-			}
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		lessThan: {
+			value: 2,
+			message: 'This field must less than 2'
 		}
-	};
-	```
+	}
+};
+```
 
 ###GreaterThan
-	For numbers (not number of characters).
+For numbers (not number of characters).
 
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			greaterThan: {
-				value: 2,
-				message: 'This field must greater than 2'
-			}
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		greaterThan: {
+			value: 2,
+			message: 'This field must greater than 2'
 		}
-	};
-	```
+	}
+};
+```
 
 ###minLength/maxLength
-	This will look for the number of characters in the field.
+This will look for the number of characters in the field.
 
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			minLength: {
-				value: 2,
-				message: 'This field must have at least 2 characters'
-			},
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		minLength: {
+			value: 2,
+			message: 'This field must have at least 2 characters'
+		},
 
-			maxLength: {
-				value: 4,
-				message: 'This field can contain maximum 4 characters'
-			}
+		maxLength: {
+			value: 4,
+			message: 'This field can contain maximum 4 characters'
 		}
-	};
-	```
+	}
+};
+```
 
 ###RegularExpression
-	This will compare a regular expresion with `test`.
+This will compare a regular expresion with `test`.
 
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			regularExpression: {
-				value: /\d/,
-				message: 'Only numbers (0-9)'
-			}
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		regularExpression: {
+			value: /\d/,
+			message: 'Only numbers (0-9)'
 		}
-	};
-	```
+	}
+};
+```
 
 ###Email
-	This uses RegularExpression (see above) to check for valid emails.
+This uses RegularExpression (see above) to check for valid emails.
 
-	Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
+Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
 
-	####Example
-	```javascript
-	var rules = {
-		'idOfTheField': {
-			email: {
-				message: 'Invalid email'
-			}
+####Example
+```javascript
+var rules = {
+	'idOfTheField': {
+		email: {
+			message: 'Invalid email'
 		}
-	};
-	```
+	}
+};
+```
 
 ##How to add my custom validation?
 You can use the `addCustomFormValidation` function:
