@@ -61,6 +61,7 @@ And we are done!. When the user submits the form, it will be validated.
 			}
 		};
 		```
+
 * ###LessThan
 	* For numbers (not number of characters).
 
@@ -127,11 +128,11 @@ And we are done!. When the user submits the form, it will be validated.
 		```
 
 * ###Email
-	* This uses RegularExpression (see above) to check for valid emails.
+	This uses RegularExpression (see above) to check for valid emails.
 
-	* Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
+	Regular expression: `/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/`
 
-	* ####Example
+	####Example
 		```javascript
 			var rules = {
 				'idOfTheField': {
@@ -156,7 +157,7 @@ addCustomFormValidation('catLanguage', function(input, data) {
 In this example, the field must be 'Miau'.
 
 ##Want to see a full example?
-Please check the examples folder ;).
+Please check the **examples** folder ;).
 
 ##LICENCE
 Nothing, it's free :D! 
