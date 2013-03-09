@@ -109,7 +109,7 @@ var __formValidation = {
  */
 var addCustomFormValidation = function(name, fn) {
 	__formValidation.validations[name] = function(input, data) {
-		return fn(input, data);
+		return fn(__formValidation.inputs[input].input, data);
 	};
 };
 

@@ -1,11 +1,11 @@
 form-validation
 =
 
-A super-light, flexible, easy-to-use form validation in javascript (requires [jQuery](http://jquery.com/)).
+A super-light (2 KB minified), flexible, easy-to-use form validation in javascript (requires [jQuery](http://jquery.com/)).
 
 How to use it?
 -
-Firs, we need to set some validation rules:
+First, we need to set some validation rules:
 
 ```javascript
 var rules = {
@@ -39,7 +39,7 @@ And we are done!. When the user submits the form, it will be validated.
 Suported validations
 -
 ###Equal
-The field, must be equal to...
+The field must be equal to...
 
 ####Example
 ```javascript
@@ -53,7 +53,7 @@ var rules = {
 };
 ```
 
-Also, we can assign an element to check for the values:
+Also, we can assign an element to check for the value:
 
 ```javascript
 var rules = {
@@ -152,8 +152,6 @@ You can use the `addCustomFormValidation` function:
 
 ```javascript
 addCustomFormValidation('catLanguage', function(input, data) {
-	// field that we are validating
-	input = __formValidation.inputs[input].input;
 	return input.val() == 'Miau';
 });
 ```

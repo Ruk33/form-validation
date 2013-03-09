@@ -15,35 +15,36 @@
 			<div>
 				<label>Repeat Username:</label>
 				<input id="repeatUsername" type="text"></input>
+				<!-- Here will be display errors for the repeatUsername input -->
 				<div id="error-repeatUsername"></div>
 			</div>
 
 			<div>
 				<label>E-Mail:</label>
 				<input id="email" type="text"></input>
+				<!-- Here will be display errors for the email input -->
 				<div id="error-email"></div>
 			</div>
 
 			<div>
 				<label>Cat word:</label>
 				<input id="catWord" type="text"></input>
+				<!-- Here will be display errors for the catWord input -->
 				<div id="error-catWord"></div>
 			</div>			
 
 			<input type="submit" value="Validate!"></input>
 		</form>
 
-		<script type="text/javascript" src="../form-validation.js"></script>
+		<script type="text/javascript" src="../form-validation.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				/*
 				 * Adding custom validation! :3
-				 * *Remember: Custom validations must be on the top, 
+				 * Remember: Custom validations must be on the top, 
 				 * before any "setValidationRules" or "rules" at least
 				 */
 				addCustomFormValidation('catLanguage', function(input, data) {
-					// field that we are validating
-					input = __formValidation.inputs[input].input;
 					return input.val() == 'Miau';
 				});
 
@@ -88,6 +89,10 @@
 				$('#form-to-validate').setValidationRules(
 					rules,
 					function() {
+						/*
+						 * If we are here, the inputs of the form
+						 * are valid
+						 */
 						console.log('Form sucessfully validated :D');
 					}
 				);
