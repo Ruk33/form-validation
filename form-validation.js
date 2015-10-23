@@ -78,6 +78,23 @@ var __formValidation = {
 						errorDiv.append('<div>' + rules[rule].message + '</div>');
 					}
 					errorDiv.show();
+				} else { // If error div not exists show a tooltip
+
+					// Input that not have error div
+					var inputTooltip = __formValidation.inputs[input].input;
+
+					$(inputTooltip).attr('rel', 'tooltip');
+					$(inputTooltip).attr('title', rules[rule].message);
+
+					// Show error in tooltip
+					$(inputTooltip).tooltip({placement: 'right',trigger: 'manual', template: '<div class="tooltip error-class"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'}).tooltip('show');
+
+					// Hide tooltip (4000ms)
+					setTimeout(function(){
+        		$(inputTooltip).tooltip('hide');
+						$(inputTooltip).removeAttr('rel');
+	          $(inputTooltip).removeAttr('title');
+    			}, 4000);
 				}
 				ok = false;
 			}
