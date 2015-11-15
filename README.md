@@ -172,4 +172,4 @@ In this example, the field must be 'Miau'.
 Please check the **examples** folder ;).
 
 ##LICENCE
-Nothing, it's free :D! 
+MIT
